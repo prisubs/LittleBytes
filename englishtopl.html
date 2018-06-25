@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ThemeSwitcher</title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+		function translatePigLatin()
+		{
+			var result = ""
+			var input = document.getElementById("userText").value
+
+			var firstletter = input.substring(0,1)
+
+			if (firstletter == 'a' || firstletter == 'e'|| firstletter == 'i' || firstletter == 'o' || firstletter == 'u')
+			{
+				result = input + "yay"
+			}
+
+			else
+			{
+				var firstletter = input.substring(0,1)
+				var remaining = input.substring(1, input.length)
+				result = result + remaining + firstletter
+				result = result + "ay"
+
+			}
+
+			document.getElementById("result").innerHTML = input + " translated to pig latin is " + result
+		}
+	</script>
+	<input type="text" id="userText">
+	<button onclick="translatePigLatin()">Translate to Pig Latin!</button>
+	<p id="result"></p>
+
+
+</body>
+</html
